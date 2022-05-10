@@ -46,28 +46,27 @@
 
                 <ImageView
                     android:id="@+id/logo_new"
-                    android:layout_width="@dimen/_115sdp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:src="@drawable/breezelogo"
-                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_width="@dimen/_125sdp"
+                    android:layout_height="@dimen/_78sdp"
                     android:layout_centerHorizontal="true"
-                    android:gravity="center|center_horizontal"
                     android:layout_gravity="center"
-                  />
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:gravity="center|center_horizontal"
+                    android:src="@drawable/breezelogo" />
 
                 <com.dryftdynamics.widgets.AppCustomTextView
                     android:id="@+id/Logo_name_TV"
-                    android:layout_below="@+id/logo_new"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center|center_horizontal"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"
+                    android:layout_below="@+id/logo_new"
                     android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center|center_horizontal"
+                    android:text="@string/app_name"
                     android:textColor="#287fb2"
-                    android:text="@string/name_filed_managenent_system"
                     android:textSize="@dimen/_12sdp"
-                    android:layout_marginTop="@dimen/_10sdp"/>
+                    android:textStyle="bold" />
 
                 <com.dryftdynamics.widgets.AppCustomTextView
                     android:id="@+id/app_title_TV"
