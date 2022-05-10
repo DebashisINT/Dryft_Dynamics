@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "19675242191",
+    "project_id": "dryft-dynamics",
+    "storage_bucket": "dryft-dynamics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19675242191:android:a26f7f52e6ba30393e61ba",
+        "android_client_info": {
+          "package_name": "com.dryftdynamics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19675242191-pb7er2mvs66h2tlemd2um6ahjn4df337.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNtkuVdOqn_BvX7x9JckHz0Bg2dVp005w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19675242191-pb7er2mvs66h2tlemd2um6ahjn4df337.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
