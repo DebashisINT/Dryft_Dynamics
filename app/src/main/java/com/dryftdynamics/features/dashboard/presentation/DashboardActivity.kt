@@ -3437,6 +3437,8 @@ class DashboardActivity : BaseActivity(), View.OnClickListener, BaseNavigation, 
 
 
     fun openShareIntents() {
+        openShare()
+        return
         try {
             val shareIntent = Intent(Intent.ACTION_SEND)
 //        val phototUri = Uri.parse(localAbsoluteFilePath)
@@ -3465,6 +3467,32 @@ class DashboardActivity : BaseActivity(), View.OnClickListener, BaseNavigation, 
 //        Uri uri = Uri.fromFile(file);
 //        emailIntent.putExtra(Intent.EXTRA_STREAM, uri);
 //        startActivity(Intent.createChooser(emailIntent,""))
+    }
+
+    fun openShare(){
+        try{
+
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND_MULTIPLE
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Here are some files.")
+            intent.type = "image/*"
+
+            val fileUrl1 = Uri.parse(File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "xdryftdynamicslogsample/log").path);
+            val fileUrl2 = Uri.parse(File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "xdryftdynamicslogsample/log.bak.1").path);
+            val files = ArrayList<Uri>()
+            if (!File(fileUrl1.path).exists()) {
+                return
+            }
+            files.add(fileUrl1)
+
+            if (File(fileUrl2.path).exists()) {
+                files.add(fileUrl2)
+            }
+            intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, files)
+            startActivity(Intent.createChooser(intent, "Share log using"))
+        }catch (ex:Exception){
+            ex.printStackTrace()
+        }
     }
 
     private fun deSelectAll() {
